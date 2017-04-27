@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:app="http://schemas.android.com/apk/res-auto"
+          xmlns:tools="http://schemas.android.com/tools"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          app:layout_behavior="@string/appbar_scrolling_view_behavior"
+          tools:context="com.sankalp.sharma.movieapp.DetailActivity"
+          tools:showIn="@layout/activity_detail">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:text="Title"
+        android:id="@+id/title"
+        android:layout_alignParentTop="true"
+        android:background="@color/accent_material_light"
+        android:textSize="@dimen/abc_text_size_headline_material"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:textAlignment="textStart"
+        android:padding="10dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_alignParentEnd="true"/>
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="200dp"
+        android:id="@+id/imageView"
+        android:layout_below="@+id/title"
+        android:layout_alignStart="@+id/title"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Medium Text"
+        android:id="@+id/overview"
+        android:layout_below="@+id/imageView"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/releaseDate"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_toEndOf="@+id/imageView"
+        android:layout_marginTop="50dp"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/trailerButton"
+        android:layout_below="@+id/overview"
+        android:layout_alignStart="@+id/overview"
+        android:src="@drawable/video_icon"
+        android:layout_marginTop="28dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/watch_trailer"
+        android:id="@+id/trailer"
+        android:layout_alignBottom="@+id/trailerButton"
+        android:layout_toEndOf="@+id/trailerButton"/>
+
+</RelativeLayout>
